@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://lime.openfl.org/project/1.0.4" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://lime.openfl.org/project/1.0.4 https://lime.openfl.org/xsd/project-1.0.4.xsd">
+
+	<!--Application Settings -->
+
+	<app title="RuntimeShader - MosaicEffect" packageName="com.majigsaw77.runtimeshader" package="com.majigsaw77.runtimeshader" version="1.0.0" company="MAJigsaw77" />
+
+	<app file="RuntimeShader - MosaicEffect" main="Main" path="export" preloader="flixel.system.FlxPreloader" />
+
+	<!--Window Settings -->
+
+	<window width="640" height="480" fps="60" orientation="landscape" background="#000000" hardware="true" vsync="false" resizable="false" />
+
+	<window if="mobile || switch" fullscreen="true" />
+
+	<!--Path Settings-->
+
+	<assets path="assets" />
+
+	<source name="source" />
+
+	<!--Libraries-->
+
+	<haxelib name="flixel" />
+	<haxelib name="flixel-addons" />
+
+	<!--Flixel Settings-->
+
+	<!--Optimise inputs, be careful you will get null errors if you don't use conditionals in your game-->
+	<haxedef name="FLX_NO_MOUSE" if="mobile" />
+	<haxedef name="FLX_NO_KEYBOARD" if="mobile" />
+	<haxedef name="FLX_NO_TOUCH" if="desktop" />
+
+	<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
+	<haxedef name="FLX_NO_DEBUG" unless="debug" />
+
+	<!--Enable this for Nape release builds for a serious peformance improvement-->
+	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
+
+</project>
