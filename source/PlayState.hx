@@ -15,7 +15,7 @@ class PlayState extends FlxState
 
 	override public function create():Void
 	{
-		var effect:FlxRuntimeShader = new FlxRuntimeShader(Assets.getText('assete/data/mosaic.frag'));
+		var effect:FlxRuntimeShader = new FlxRuntimeShader(Assets.getText('assets/data/mosaic.frag'));
 		effect.setFloatArray('uBlocksize', [1, 1]);
 
 		var backdrop:FlxSprite = new FlxSprite(0, 0, 'assets/images/backdrop.png');
